@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="University Digital Notice Board - Contact information for university departments, administration, and student services." />
+  <title>Contact Us | University Digital Notice Board</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">🎓</span>
+        <span class="logo-text">UniBoard</span>
+      </div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="notices.html">Notices</a></li>
+          <li><a href="exams.html">Exams</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Contact Us</h1>
+        <p>Reach out to our departments and student services team.</p>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h2>University Contact Information</h2>
+
+            <div class="contact-card" id="main-office">
+              <div class="contact-card-icon" aria-hidden="true">🏛️</div>
+              <div class="contact-card-body">
+                <h3>Main Office</h3>
+                <address>
+                  University of Digital Sciences<br />
+                  Block 14, University Road<br />
+                  Islamabad, Pakistan – 44000
+                </address>
+                <p><strong>Phone:</strong> <a href="tel:+925112345678">+92 51 1234 5678</a></p>
+                <p><strong>Email:</strong> <a href="mailto:info@uds.edu.pk">info@uds.edu.pk</a></p>
+                <p><strong>Office Hours:</strong> Mon–Fri, 9:00 AM – 5:00 PM</p>
+              </div>
+            </div>
+
+            <div class="contact-card" id="admissions-office">
+              <div class="contact-card-icon" aria-hidden="true">📋</div>
+              <div class="contact-card-body">
+                <h3>Admissions Office</h3>
+                <p><strong>Phone:</strong> <a href="tel:+925112345679">+92 51 1234 5679</a></p>
+                <p><strong>Email:</strong> <a href="mailto:admissions@uds.edu.pk">admissions@uds.edu.pk</a></p>
+                <p><strong>Hours:</strong> Mon–Sat, 9:00 AM – 4:00 PM</p>
+              </div>
+            </div>
+
+            <div class="contact-card" id="exam-office">
+              <div class="contact-card-icon" aria-hidden="true">📝</div>
+              <div class="contact-card-body">
+                <h3>Examination Office</h3>
+                <p><strong>Phone:</strong> <a href="tel:+925112345680">+92 51 1234 5680</a></p>
+                <p><strong>Email:</strong> <a href="mailto:exams@uds.edu.pk">exams@uds.edu.pk</a></p>
+                <p><strong>Hours:</strong> Mon–Fri, 9:00 AM – 3:00 PM</p>
+              </div>
+            </div>
+
+            <div class="contact-card" id="student-services">
+              <div class="contact-card-icon" aria-hidden="true">🎓</div>
+              <div class="contact-card-body">
+                <h3>Student Services</h3>
+                <p><strong>Phone:</strong> <a href="tel:+925112345681">+92 51 1234 5681</a></p>
+                <p><strong>Email:</strong> <a href="mailto:students@uds.edu.pk">students@uds.edu.pk</a></p>
+                <p><strong>Hours:</strong> Mon–Fri, 9:00 AM – 5:00 PM</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-wrapper">
+            <h2>Send Us a Message</h2>
+            <form class="contact-form" id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="fullName" placeholder="Enter your full name" required />
+              </div>
+              <div class="form-group">
+                <label for="email-address">Email Address</label>
+                <input type="email" id="email-address" name="email" placeholder="Enter your email address" required />
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <select id="subject" name="subject" required>
+                  <option value="">Select a subject</option>
+                  <option value="admissions">Admissions Inquiry</option>
+                  <option value="exams">Examination Query</option>
+                  <option value="fees">Fees and Finance</option>
+                  <option value="hostel">Hostel and Accommodation</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+              <div class="form-success" id="form-success" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-icon">🎓</span>
+        <span class="logo-text">UniBoard</span>
+        <p>Empowering students with timely information.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="notices.html">Notices</a></li>
+          <li><a href="exams.html">Exams</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 University Digital Notice Board. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    var toggle = document.querySelector('.nav-toggle');
+    var nav = document.querySelector('.main-nav');
+    if (toggle && nav) {
+      toggle.addEventListener('click', function () {
+        var expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('open');
+      });
+    }
+
+    var form = document.getElementById('contact-form');
+    var successMsg = document.getElementById('form-success');
+    if (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (form.checkValidity()) {
+          successMsg.textContent = '✅ Thank you! Your message has been sent. We will respond within 2 business days.';
+          successMsg.classList.add('show');
+          form.reset();
+        }
+      });
+    }
+  </script>
+</body>
+</html>

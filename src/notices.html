@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="University Digital Notice Board - Academic notices, departmental announcements and important university updates." />
+  <title>Academic Notices | University Digital Notice Board</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">🎓</span>
+        <span class="logo-text">UniBoard</span>
+      </div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="notices.html" class="active">Notices</a></li>
+          <li><a href="exams.html">Exams</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Academic Notices</h1>
+        <p>Important announcements from departments and university administration.</p>
+      </div>
+    </section>
+
+    <section class="notices-section">
+      <div class="container">
+        <div class="filter-bar">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="urgent">Urgent</button>
+          <button class="filter-btn" data-filter="info">Information</button>
+          <button class="filter-btn" data-filter="event">Events</button>
+        </div>
+
+        <ul class="notice-list full-list">
+          <li class="notice-item notice-urgent" data-category="urgent">
+            <span class="notice-badge">Urgent</span>
+            <div class="notice-body">
+              <h2>Mid-Term Examination Dates Announced</h2>
+              <p>Mid-term exams for all departments will commence from May 15, 2026. Students must carry their ID cards and admit cards. Late arrivals will not be permitted.</p>
+              <p><strong>Affected departments:</strong> Computer Science, Business Administration, Engineering, Social Sciences.</p>
+              <time datetime="2026-04-28">April 28, 2026</time>
+            </div>
+          </li>
+          <li class="notice-item" data-category="info">
+            <span class="notice-badge notice-info">Info</span>
+            <div class="notice-body">
+              <h2>Campus Wi-Fi Upgrade Scheduled</h2>
+              <p>Network infrastructure maintenance will be conducted on May 2, 2026 between 2:00 AM – 6:00 AM. All online services including the student portal may be temporarily unavailable.</p>
+              <time datetime="2026-04-27">April 27, 2026</time>
+            </div>
+          </li>
+          <li class="notice-item" data-category="event">
+            <span class="notice-badge notice-event">Event</span>
+            <div class="notice-body">
+              <h2>Annual Science Fair – Registration Open</h2>
+              <p>Students from all departments are invited to participate in the Annual Science Fair scheduled for May 20, 2026. Teams of 2–4 students can register through the student portal before May 10, 2026.</p>
+              <time datetime="2026-04-25">April 25, 2026</time>
+            </div>
+          </li>
+          <li class="notice-item notice-urgent" data-category="urgent">
+            <span class="notice-badge">Urgent</span>
+            <div class="notice-body">
+              <h2>Library Book Return Deadline</h2>
+              <p>All borrowed books must be returned to the university library by April 30, 2026. Failure to return books on time will result in a fine of PKR 50 per day per book.</p>
+              <time datetime="2026-04-24">April 24, 2026</time>
+            </div>
+          </li>
+          <li class="notice-item" data-category="info">
+            <span class="notice-badge notice-info">Info</span>
+            <div class="notice-body">
+              <h2>Revised Academic Calendar 2025–26</h2>
+              <p>The university has revised the academic calendar for the current academic year. Students and faculty are advised to download the updated calendar from the official website.</p>
+              <time datetime="2026-04-20">April 20, 2026</time>
+            </div>
+          </li>
+          <li class="notice-item" data-category="event">
+            <span class="notice-badge notice-event">Event</span>
+            <div class="notice-body">
+              <h2>Guest Lecture: Artificial Intelligence in Healthcare</h2>
+              <p>A guest lecture by Dr. Ayesha Khan (MIT) on "Artificial Intelligence in Healthcare" will be held on May 5, 2026 at 10:00 AM in Auditorium A. Attendance is open to all students.</p>
+              <time datetime="2026-04-18">April 18, 2026</time>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-icon">🎓</span>
+        <span class="logo-text">UniBoard</span>
+        <p>Empowering students with timely information.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="notices.html">Notices</a></li>
+          <li><a href="exams.html">Exams</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 University Digital Notice Board. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.main-nav');
+    if (toggle && nav) {
+      toggle.addEventListener('click', function () {
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('open');
+      });
+    }
+
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const noticeItems = document.querySelectorAll('.notice-item[data-category]');
+    filterBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        filterBtns.forEach(function (b) { b.classList.remove('active'); });
+        this.classList.add('active');
+        var filter = this.getAttribute('data-filter');
+        noticeItems.forEach(function (item) {
+          if (filter === 'all' || item.getAttribute('data-category') === filter) {
+            item.style.display = 'flex';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

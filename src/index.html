@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="University Digital Notice Board - Stay updated with the latest university announcements, notices, and events." />
+  <title>University Digital Notice Board | Home</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">🎓</span>
+        <span class="logo-text">UniBoard</span>
+      </div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="notices.html">Notices</a></li>
+          <li><a href="exams.html">Exams</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>University Digital Notice Board</h1>
+        <p class="hero-subtitle">Your central hub for all university announcements, schedules, and updates.</p>
+        <div class="hero-actions">
+          <a href="notices.html" class="btn btn-primary">View Notices</a>
+          <a href="exams.html" class="btn btn-secondary">Exam Schedule</a>
+        </div>
+      </div>
+      <div class="hero-decoration" aria-hidden="true">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+      </div>
+    </section>
+
+    <section class="quick-links">
+      <div class="container">
+        <h2>Quick Access</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-icon">📋</div>
+            <h3>Academic Notices</h3>
+            <p>Stay updated with the latest academic announcements, schedule changes, and departmental notices.</p>
+            <a href="notices.html" class="card-link">View All Notices →</a>
+          </article>
+          <article class="card">
+            <div class="card-icon">📝</div>
+            <h3>Exam Schedules</h3>
+            <p>Check upcoming mid-term and final examination timetables, room assignments, and regulations.</p>
+            <a href="exams.html" class="card-link">View Schedule →</a>
+          </article>
+          <article class="card">
+            <div class="card-icon">🎓</div>
+            <h3>Admissions</h3>
+            <p>Explore admission criteria, important dates, required documents, and application procedures.</p>
+            <a href="admissions.html" class="card-link">Learn More →</a>
+          </article>
+          <article class="card">
+            <div class="card-icon">📞</div>
+            <h3>Contact Us</h3>
+            <p>Get in touch with the administration, department offices, or student services for support.</p>
+            <a href="contact.html" class="card-link">Contact Now →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="latest-notices">
+      <div class="container">
+        <h2>Latest Announcements</h2>
+        <ul class="notice-list">
+          <li class="notice-item notice-urgent">
+            <span class="notice-badge">Urgent</span>
+            <div class="notice-body">
+              <h3>Mid-Term Examination Dates Announced</h3>
+              <p>Mid-term exams for all departments will commence from May 15, 2026. Students are advised to check the detailed schedule.</p>
+              <time datetime="2026-04-28">April 28, 2026</time>
+            </div>
+          </li>
+          <li class="notice-item">
+            <span class="notice-badge notice-info">Info</span>
+            <div class="notice-body">
+              <h3>Campus Wi-Fi Upgrade Scheduled</h3>
+              <p>Network maintenance will be conducted on May 2, 2026 from 2:00 AM – 6:00 AM. Services may be temporarily unavailable.</p>
+              <time datetime="2026-04-27">April 27, 2026</time>
+            </div>
+          </li>
+          <li class="notice-item">
+            <span class="notice-badge notice-event">Event</span>
+            <div class="notice-body">
+              <h3>Annual Science Fair – Registration Open</h3>
+              <p>Students are invited to participate in the Annual Science Fair. Register by May 10, 2026 through the student portal.</p>
+              <time datetime="2026-04-25">April 25, 2026</time>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-icon">🎓</span>
+        <span class="logo-text">UniBoard</span>
+        <p>Empowering students with timely information.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="notices.html">Notices</a></li>
+          <li><a href="exams.html">Exams</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 University Digital Notice Board. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.main-nav');
+    if (toggle && nav) {
+      toggle.addEventListener('click', function () {
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('open');
+      });
+    }
+  </script>
+</body>
+</html>

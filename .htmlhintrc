@@ -1,0 +1,11 @@
+{
+  "tag-pair": true,
+  "attr-value-double-quotes": true,
+  "id-unique": true,
+  "doctype-first": true,
+  "title-require": true,
+  "alt-require": true,
+  "spec-char-escape": true,
+  "id-class-value": "dash",
+  "style-disabled": true
+}
