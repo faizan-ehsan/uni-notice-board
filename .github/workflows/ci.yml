@@ -75,12 +75,12 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: dist-files
-          path: ./dist-files
+          path: ./dist
 
       - name: Verify files
         run: |
           ls -R
-          ls -R ./dist-files
+          ls -R ./dist
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
